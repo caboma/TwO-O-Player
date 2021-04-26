@@ -12,4 +12,29 @@
 #10 - if player's answer is not correct, call class to reduce life by 1
 #11 - class class to check the remaining lives > 0,if life>0 return to step #3, if lives == 0 game over
 #12 - ask players to play again or end game - "Want to play again? enter 1 - (yes) 0 - (no)"
+require './players'
+require './random_numbers'
 
+class Game
+  attr_accessor :current_player :life
+
+  def initialize(current_player, life)
+    @current_player = 1,
+    @life = 3
+  end
+
+  first_number = random_num
+  second_number = random_num
+  sum = first_number + second_number
+
+  print "Player 1 -: What does #{first_number} plus #{second_number} equal?"
+  answer = gets.chomp.to_i
+  
+  if sum == answer
+    puts "You're answer is correct. Your answer: #{answer} = Correct answer: #{sum} "
+  else
+    puts "You're answer is incorrect. The correct answer is #{sum}"
+  end
+
+
+end
