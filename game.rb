@@ -33,7 +33,7 @@ class Game
       elsif @current_player == 2
         @current_player = 1
       end
-
+      puts "\n"
     end
     if @player1.life > 0
       puts "Player 1 wins with #{@player1.life} life remaining"
