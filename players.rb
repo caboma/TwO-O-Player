@@ -1,16 +1,10 @@
-require 'active_support/all'
+class Player
 
-@players = [
-  {
-    id: 1,
-  name: "",
-  life: 3,
-  current_player: true
-  },
-  {
-    id: 2,
-    name: "",
-    life: 3,
-    current_player: false
-  },
-]
+  attr_accessor :name, :life
+
+  def initialize(name, life)
+    @name = name
+    @life = life
+  end
+
+end
